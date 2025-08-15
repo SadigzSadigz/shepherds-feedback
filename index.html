@@ -1,169 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Shepherds Paints & Supplies</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-    header {
-      background: #2c3e50;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    header p {
-      margin: 5px 0 0;
-      font-style: italic;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      padding: 30px;
-    }
-    .product {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .product h3 {
-      margin-top: 0;
-      color: #2c3e50;
-    }
-    form {
-      background: white;
-      margin: 30px auto;
-      padding: 20px;
-      max-width: 600px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    form h2 {
-      text-align: center;
-      color: #2c3e50;
-    }
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 15px;
-      margin-bottom: 5px;
-    }
-    input, textarea, select, button {
-      width: 100%;
-      padding: 10px;
-      margin: 5px 0 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    textarea {
-      resize: vertical;
-    }
-    button {
-      background: #27ae60;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-size: 1em;
-    }
-    button:hover {
-      background: #2ecc71;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #2c3e50;
-      color: white;
-      margin-top: 30px;
-    }
-  </style>
-</head>
-<body>
+<form action="https://formspree.io/f/xdkdjynv" method="POST">
+  <h2>We value your feedback</h2>
 
-  <header>
-    <h1>Shepherds Paints & Supplies</h1>
-    <p>Your trusted partner for quality paints and finishes in Kitengela</p>
-  </header>
+  <!-- Q1 -->
+  <label>How would you rate the quality of our paints?</label>
+  <select name="paint_quality" required>
+    <option value="" selected disabled>-- Select Rating --</option>
+    <option>⭐ Excellent</option>
+    <option>👍 Good</option>
+    <option>👌 Average</option>
+    <option>👎 Poor</option>
+  </select>
 
-  <section class="products">
-    <div class="product">
-      <h3>Premium Paints</h3>
-      <p>Durable, vibrant, and perfect for every surface.</p>
-    </div>
-    <div class="product">
-      <h3>Brushes & Rollers</h3>
-      <p>Professional tools for a perfect finish.</p>
-    </div>
-    <div class="product">
-      <h3>Painting Supplies</h3>
-      <p>All accessories you need to get the job done right.</p>
-    </div>
-  </section>
+  <!-- Q2 -->
+  <label>How would you rate our customer service?</label>
+  <select name="customer_service" required>
+    <option value="" selected disabled>-- Select Option --</option>
+    <option>😊 Friendly & Helpful</option>
+    <option>😐 Okay</option>
+    <option>🙁 Needs Improvement</option>
+  </select>
 
-  <form>
-    <h2>We value your feedback</h2>
+  <!-- Q3 -->
+  <label>Were our prices fair compared to value?</label>
+  <input type="radio" name="prices" value="yes"> Yes  
+  <input type="radio" name="prices" value="somewhat"> Somewhat  
+  <input type="radio" name="prices" value="no"> No  
 
-    <!-- Q1 -->
-    <label>How would you rate the quality of our paints?</label>
-    <select required>
-      <option value="" selected disabled>-- Select Rating --</option>
-      <option>⭐ Excellent</option>
-      <option>👍 Good</option>
-      <option>👌 Average</option>
-      <option>👎 Poor</option>
-    </select>
+  <!-- Q4 -->
+  <label>Which of our products do you use most?</label>
+  <input type="checkbox" name="product_paints" value="paints"> Paints  
+  <input type="checkbox" name="product_brushes" value="brushes"> Brushes & Rollers  
+  <input type="checkbox" name="product_supplies" value="supplies"> Other Supplies  
 
-    <!-- Q2 -->
-    <label>How would you rate our customer service?</label>
-    <select required>
-      <option value="" selected disabled>-- Select Option --</option>
-      <option>😊 Friendly & Helpful</option>
-      <option>😐 Okay</option>
-      <option>🙁 Needs Improvement</option>
-    </select>
+  <!-- Q5 -->
+  <label>Would you recommend Shepherds Paints & Supplies to others?</label>
+  <select name="recommendation" required>
+    <option value="" selected disabled>-- Select Option --</option>
+    <option>✅ Yes, definitely</option>
+    <option>🤔 Maybe</option>
+    <option>❌ No</option>
+  </select>
 
-    <!-- Q3 -->
-    <label>Were our prices fair compared to value?</label>
-    <input type="radio" name="prices" value="yes"> Yes  
-    <input type="radio" name="prices" value="somewhat"> Somewhat  
-    <input type="radio" name="prices" value="no"> No  
+  <!-- Open Comment -->
+  <label>Any suggestions to help us improve?</label>
+  <textarea name="suggestions" rows="4" placeholder="Type your feedback here..."></textarea>
 
-    <!-- Q4 -->
-    <label>Which of our products do you use most?</label>
-    <input type="checkbox" name="product" value="paints"> Paints  
-    <input type="checkbox" name="product" value="brushes"> Brushes & Rollers  
-    <input type="checkbox" name="product" value="supplies"> Other Supplies  
-
-    <!-- Q5 -->
-    <label>Would you recommend Shepherds Paints & Supplies to others?</label>
-    <select required>
-      <option value="" selected disabled>-- Select Option --</option>
-      <option>✅ Yes, definitely</option>
-      <option>🤔 Maybe</option>
-      <option>❌ No</option>
-    </select>
-
-    <!-- Open Comment -->
-    <label>Any suggestions to help us improve?</label>
-    <textarea rows="4" placeholder="Type your feedback here..."></textarea>
-
-    <button type="submit">Submit Feedback</button>
-  </form>
-
-  <footer>
-    <p>&copy; 2025 Shepherds Paints & Supplies | Kitengela</p>
-  </footer>
-
-</body>
-</html>
+  <button type="submit">Submit Feedback</button>
+</form>
