@@ -2,186 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shepherds Paints & Supplies - Feedback</title>
+  <title>Shepherds Paints & Supplies</title>
   <style>
-    /* Reset & basics */
-    * {
-      box-sizing: border-box;
-    }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f4f8;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
       margin: 0;
+      padding: 0;
       color: #333;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
-
     header {
-      background: #2a3d66;
-      color: #fff;
-      padding: 30px 20px;
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
       text-align: center;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     }
     header h1 {
       margin: 0;
-      font-size: 2.8rem;
-      letter-spacing: 2px;
+      font-size: 2.5em;
     }
     header p {
+      margin: 5px 0 0;
       font-style: italic;
-      margin-top: 8px;
-      font-size: 1.1rem;
-      opacity: 0.85;
     }
-
     .products {
-      max-width: 1000px;
-      margin: 40px auto 20px;
-      padding: 0 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 30px;
     }
     .product {
       background: white;
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
-    }
-    .product:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
     .product h3 {
       margin-top: 0;
-      color: #2a3d66;
-      font-size: 1.5rem;
+      color: #2c3e50;
     }
-    .product p {
-      font-size: 1rem;
-      margin-top: 8px;
-      color: #555;
-    }
-
     form {
       background: white;
-      max-width: 700px;
-      margin: 40px auto 60px;
+      margin: 30px auto 50px auto;
       padding: 30px 40px;
-      border-radius: 15px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-      font-size: 1rem;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
     form h2 {
       text-align: center;
-      color: #2a3d66;
+      color: #2c3e50;
       margin-bottom: 25px;
-      font-size: 2rem;
-      letter-spacing: 1.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
-
     label {
+      font-weight: bold;
       display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-      color: #2a3d66;
-      margin-top: 20px;
-      font-size: 1.1rem;
+      margin-top: 15px;
+      margin-bottom: 7px;
+      color: #444;
     }
-
-    select, input[type="text"], textarea {
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
       width: 100%;
       padding: 12px 15px;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1.5px solid #ccc;
+      font-size: 1em;
       transition: border-color 0.3s ease;
-      font-family: inherit;
     }
-    select:focus, input[type="text"]:focus, textarea:focus {
-      border-color: #2a3d66;
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #27ae60;
       outline: none;
-      box-shadow: 0 0 8px #2a3d66aa;
     }
-
-    /* Radio and checkbox groups */
-    input[type="radio"], input[type="checkbox"] {
+    input[type="radio"],
+    input[type="checkbox"] {
       margin-right: 8px;
-      transform: scale(1.2);
       cursor: pointer;
-      vertical-align: middle;
     }
-    /* To space radio/checkbox options */
     .option-group {
-      margin-top: 8px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
+      margin-bottom: 15px;
     }
-    .option-group label {
-      font-weight: normal;
-      color: #555;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 90px;
-    }
-
     button {
-      background: #2a3d66;
+      background: #27ae60;
       color: white;
-      font-weight: 700;
       border: none;
-      padding: 15px 0;
-      width: 100%;
-      border-radius: 10px;
       cursor: pointer;
-      font-size: 1.2rem;
-      margin-top: 30px;
+      font-size: 1.15em;
+      padding: 14px 0;
+      width: 100%;
+      border-radius: 8px;
+      font-weight: 700;
       transition: background-color 0.3s ease;
+      letter-spacing: 0.5px;
     }
     button:hover {
-      background: #415a99;
+      background: #2ecc71;
     }
-
     footer {
-      background: #2a3d66;
-      color: white;
       text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      letter-spacing: 1.1px;
-      user-select: none;
-      margin-top: auto;
-    }
-
-    /* Responsive */
-    @media (max-width: 480px) {
-      form {
-        padding: 25px 20px;
-      }
-      .products {
-        grid-template-columns: 1fr;
-        margin: 20px auto;
-      }
-      header h1 {
-        font-size: 2rem;
-      }
-      form h2 {
-        font-size: 1.6rem;
-      }
+      padding: 15px;
+      background: #2c3e50;
+      color: white;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -207,42 +138,79 @@
     </div>
   </section>
 
-  <form action="https://formspree.io/f/xdkdjynv" method="POST" novalidate>
+  <form action="https://formspree.io/f/xdkdjynv" method="POST">
     <h2>We value your feedback</h2>
 
-    <!-- Q1 -->
     <label for="paint_quality">How would you rate the quality of our paints?</label>
     <select name="paint_quality" id="paint_quality" required>
-      <option value="" selected disabled>-- Select Rating --</option>
+      <option value="" disabled selected>-- Select Rating --</option>
       <option>⭐ Excellent</option>
       <option>👍 Good</option>
       <option>👌 Average</option>
       <option>👎 Poor</option>
     </select>
 
-    <!-- Q2 -->
     <label for="customer_service">How would you rate our customer service?</label>
     <select name="customer_service" id="customer_service" required>
-      <option value="" selected disabled>-- Select Option --</option>
+      <option value="" disabled selected>-- Select Option --</option>
       <option>😊 Friendly & Helpful</option>
       <option>😐 Okay</option>
       <option>🙁 Needs Improvement</option>
     </select>
 
-    <!-- Q3 -->
     <label>Were our prices fair compared to value?</label>
     <div class="option-group">
-      <label><input type="radio" name="prices" value="yes" required> Yes</label>
-      <label><input type="radio" name="prices" value="somewhat"> Somewhat</label>
-      <label><input type="radio" name="prices" value="no"> No</label>
+      <input type="radio" id="prices_yes" name="prices" value="yes" required>
+      <label for="prices_yes" style="display:inline;">Yes</label>  
+
+      <input type="radio" id="prices_somewhat" name="prices" value="somewhat">
+      <label for="prices_somewhat" style="display:inline;">Somewhat</label>  
+
+      <input type="radio" id="prices_no" name="prices" value="no">
+      <label for="prices_no" style="display:inline;">No</label>  
     </div>
 
-    <!-- Q4 -->
     <label>Which of our products do you use most?</label>
     <div class="option-group">
-      <label><input type="checkbox" name="product_paints" value="paints"> Paints</label>
-      <label><input type="checkbox" name="product_brushes" value="brushes"> Brushes & Rollers</label>
-      <label><input type="checkbox" name="product_supplies" value="supplies"> Other Supplies</label>
+      <input type="checkbox" id="product_paints" name="product_paints" value="paints">
+      <label for="product_paints" style="display:inline;">Paints</label>  
+
+      <input type="checkbox" id="product_brushes" name="product_brushes" value="brushes">
+      <label for="product_brushes" style="display:inline;">Brushes & Rollers</label>  
+
+      <input type="checkbox" id="product_supplies" name="product_supplies" value="supplies">
+      <label for="product_supplies" style="display:inline;">Other Supplies</label>  
     </div>
 
-    <!--
+    <label for="recommendation">Would you recommend Shepherds Paints & Supplies to others?</label>
+    <select name="recommendation" id="recommendation" required>
+      <option value="" disabled selected>-- Select Option --</option>
+      <option>✅ Yes, definitely</option>
+      <option>🤔 Maybe</option>
+      <option>❌ No</option>
+    </select>
+
+    <label for="overall_experience">How would you rate your overall experience with us?</label>
+    <select name="overall_experience" id="overall_experience" required>
+      <option value="" disabled selected>-- Select Rating --</option>
+      <option>⭐ Excellent</option>
+      <option>👍 Good</option>
+      <option>👌 Average</option>
+      <option>👎 Poor</option>
+    </select>
+
+    <label for="products_wanted">What products would you like to see added?</label>
+    <input type="text" name="products_wanted" id="products_wanted" placeholder="Your suggestions here..." />
+
+    <label for="suggestions">Any suggestions to help us improve?</label>
+    <textarea name="suggestions" id="suggestions" rows="4" placeholder="Type your feedback here..."></textarea>
+
+    <button type="submit">Submit Feedback</button>
+  </form>
+
+  <footer>
+    <p>&copy; 2025 Shepherds Paints & Supplies | Kitengela</p>
+  </footer>
+
+</body>
+</html>
